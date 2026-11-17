@@ -6,35 +6,44 @@ const aboutCards = [
   {
     icon: Code,
     title: "Full-Stack Development",
-    description: "Building scalable web apps with Next.js, React, Node.js, Express, and modern MERN architecture.",
+    description:
+      "Building scalable web apps with Next.js, React, Node.js, Express, and modern MERN architecture.",
   },
   {
     icon: Rocket,
     title: "Performance & Modern UI",
-    description: "Focusing on blazing fast page loads, clean code structure, and intuitive user experiences with Tailwind CSS.",
+    description:
+      "Focusing on blazing fast page loads, clean code structure, and intuitive user experiences with Tailwind CSS.",
   },
   {
     icon: ShieldCheck,
     title: "Secure Authentication",
-    description: "Implementing production-grade authentication with Better-Auth, NextAuth, and JWT with security-first mindset.",
+    description:
+      "Implementing production-grade authentication with Better-Auth, NextAuth, and JWT with security-first mindset.",
   },
   {
     icon: Database,
     title: "Data & Systems Engineering",
-    description: "Managing databases with MongoDB Aggregation, RESTful APIs, and traditional LAMP stack integrations.",
-  }
+    description:
+      "Managing databases with MongoDB Aggregation, RESTful APIs, and traditional LAMP stack integrations.",
+  },
 ];
 
 export default function AboutMe() {
   return (
-    <section id="about" className="py-20 px-4 md:px-10 max-w-6xl mx-auto overflow-hidden">
+    <section
+      id="about"
+      className="py-20 px-4 md:px-10 max-w-6xl mx-auto overflow-hidden"
+    >
       {/* Section Title */}
       <div className="text-center mb-16 space-y-3">
         <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-          Who <span className="text-purple-400">I Am</span>
+          Who <span className="text-purple-400">Am I</span>
         </h2>
         <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-          A dedicated Full Stack Developer specializing in MERN Stack and Next.js, crafting modern digital solutions with high security and exceptional performance.
+          A dedicated Full Stack Developer specializing in MERN Stack and
+          Next.js, crafting modern digital solutions with high security and
+          exceptional performance.
         </p>
       </div>
 
@@ -76,30 +85,52 @@ export default function AboutMe() {
       </div>
 
       {/* Story & Fast Facts Detailed Card */}
-      <div 
+      <div
         className="p-8 md:p-10 rounded-3xl backdrop-blur-2xl relative overflow-hidden"
         style={{
-          background: "linear-gradient(to bottom right, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4))",
+          background:
+            "linear-gradient(to bottom right, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4))",
           border: "2px solid transparent",
-          backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), linear-gradient(to right, #06b6d4, #a855f7, #ec4899)",
+          backgroundImage:
+            "linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), linear-gradient(to right, #06b6d4, #a855f7, #ec4899)",
           backgroundOrigin: "border-box",
           backgroundClip: "padding-box, border-box",
-          boxShadow: "0 0 35px rgba(6, 182, 212, 0.12), inset 0 0 20px rgba(168, 85, 247, 0.08)"
+          boxShadow:
+            "0 0 35px rgba(6, 182, 212, 0.12), inset 0 0 20px rgba(168, 85, 247, 0.08)",
         }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4 text-slate-300 text-sm md:text-base leading-relaxed">
             <h3 className="text-2xl font-bold text-white flex items-center gap-2">
-              <Zap className="text-cyan-400" size={24} /> My Journey & Technical Philosophy
+              <Zap className="text-cyan-400" size={24} /> My Journey & Technical
+              Philosophy
             </h3>
             <p>
-              My programming journey started with pure curiosity about how web applications operate under the hood. What began as experimenting with code has evolved into a dedicated focus on building full-stack applications with modern web technologies.
+              My programming journey started with pure curiosity about how web
+              applications operate under the hood. What began as experimenting
+              with code has evolved into a dedicated focus on building
+              full-stack applications with modern web technologies.
             </p>
             <p>
-              I specialize in engineering responsive, fast, and scalable web solutions using the <strong className="text-white">MERN Stack (MongoDB, Express, React, Node.js)</strong> and <strong className="text-white">Next.js</strong>. I place strong emphasis on clean code architecture, intuitive UI/UX with Tailwind CSS, and implementing secure workflows using authentication tools like <strong className="text-cyan-400">Better-Auth</strong> and JWT.
+              I specialize in engineering responsive, fast, and scalable web
+              solutions using the{" "}
+              <strong className="text-white">
+                MERN Stack (MongoDB, Express, React, Node.js)
+              </strong>{" "}
+              and <strong className="text-white">Next.js</strong>. I place
+              strong emphasis on clean code architecture, intuitive UI/UX with
+              Tailwind CSS, and implementing secure workflows using
+              authentication tools like{" "}
+              <strong className="text-cyan-400">Better-Auth</strong> and JWT.
             </p>
             <p>
-              Alongside modern JavaScript frameworks, I also have foundational experience working with backend databases and traditional technologies like the <span className="text-purple-300">LAMP Stack (PHP/MySQL)</span>. I am continuously expanding my knowledge in cybersecurity best practices to ensure every application is resilient and production-ready.
+              Alongside modern JavaScript frameworks, I also have foundational
+              experience working with backend databases and traditional
+              technologies like the{" "}
+              <span className="text-purple-300">LAMP Stack (PHP/MySQL)</span>. I
+              am continuously expanding my knowledge in cybersecurity best
+              practices to ensure every application is resilient and
+              production-ready.
             </p>
           </div>
 
@@ -114,15 +145,21 @@ export default function AboutMe() {
               </div>
               <div className="flex justify-between items-center border-b border-slate-800/80 pb-2.5">
                 <span className="text-slate-400">Authentication</span>
-                <span className="text-cyan-400 font-semibold">Better-Auth / NextAuth</span>
+                <span className="text-cyan-400 font-semibold">
+                  Better-Auth / NextAuth
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-slate-800/80 pb-2.5">
                 <span className="text-slate-400">Secondary Tech</span>
-                <span className="text-purple-300 font-semibold">LAMP Stack (PHP/MySQL)</span>
+                <span className="text-purple-300 font-semibold">
+                  LAMP Stack (PHP/MySQL)
+                </span>
               </div>
               <div className="flex justify-between items-center border-b border-slate-800/80 pb-2.5">
                 <span className="text-slate-400">Core Mindset</span>
-                <span className="text-white font-semibold">Security & Performance</span>
+                <span className="text-white font-semibold">
+                  Security & Performance
+                </span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-slate-400">Location</span>

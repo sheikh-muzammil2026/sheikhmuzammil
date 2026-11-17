@@ -18,7 +18,7 @@ export default function ContactForm() {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        body: formData,
       });
 
       const data = await response.json();
@@ -27,23 +27,31 @@ export default function ContactForm() {
         setResult("Thank you! Your message has been sent successfully.");
         event.target.reset();
       } else {
-        setResult(data.message || "Failed to send message. Please email directly.");
+        setResult(
+          data.message || "Failed to send message. Please email directly.",
+        );
       }
     } catch (err) {
-      setResult("Network error. Please email directly to discordsstudent@gmail.com");
+      setResult(
+        "Network error. Please email directly to discordsstudent@gmail.com",
+      );
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section id="contact" className="py-24 px-6 md:px-12 relative z-10 max-w-4xl mx-auto">
+    <section
+      id="contact"
+      className="py-24 px-6 md:px-12 relative z-10 max-w-4xl mx-auto"
+    >
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-3">
           Get In <span className="text-purple-400">Touch</span>
         </h2>
         <p className="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-          Have a project in mind, need a full-stack engineer, or want to discuss institutional infrastructure? Send a message below.
+          Have a project in mind, need a full-stack engineer, or want to discuss
+          institutional infrastructure? Send a message below.
         </p>
       </div>
 
@@ -53,8 +61,11 @@ export default function ContactForm() {
             <Mail size={18} />
           </div>
           <span className="text-xs text-slate-400">Email Me</span>
-          <a href="mailto:discordsstudent@gmail.com" className="text-sm font-semibold text-white hover:text-cyan-400 transition-colors mt-1">
-            discordsstudent@gmail.com
+          <a
+            href="mailto:dev.sheikhmuzammil@gmail.com"
+            className="text-sm font-semibold text-white hover:text-cyan-400 transition-colors mt-1"
+          >
+            dev.sheikhmuzammil@gmail.com
           </a>
         </div>
 
@@ -63,7 +74,10 @@ export default function ContactForm() {
             <Phone size={18} />
           </div>
           <span className="text-xs text-slate-400">Call / WhatsApp</span>
-          <a href="tel:+8801836376174" className="text-sm font-semibold text-white hover:text-cyan-400 transition-colors mt-1">
+          <a
+            href="tel:+8801836376174"
+            className="text-sm font-semibold text-white hover:text-cyan-400 transition-colors mt-1"
+          >
             +880 1836-376174
           </a>
         </div>
@@ -83,7 +97,9 @@ export default function ContactForm() {
         <form onSubmit={onSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+              <label className="block text-sm font-medium text-slate-300 mb-2">
+                Your Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -93,7 +109,9 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
+              <label className="block text-sm font-medium text-slate-300 mb-2">
+                Your Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -103,9 +121,11 @@ export default function ContactForm() {
               />
             </div>
           </div>
-          
+
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-2">Message</label>
+            <label className="block text-sm font-medium text-slate-300 mb-2">
+              Message
+            </label>
             <textarea
               name="message"
               required
@@ -123,7 +143,7 @@ export default function ContactForm() {
             <Send size={16} /> {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-        
+
         {result && (
           <div className="mt-4 text-center text-sm font-medium text-purple-400">
             {result}
